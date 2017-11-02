@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
 
+import { css } from 'glamor';
+
 import { Navbar, NavItem, Background, Layout } from './common';
 import Home from './home/Home';
 import About from './about/About';
 import Contact from './contact/Contact';
 
-import logo from '../logo.svg';
-import './App.css';
+let style = css({
+   textAlign: 'center'
+});
 
 class App extends Component {
    render() {
       return (
-         <div className="App">
-            <Background url='https://i.pinimg.com/originals/53/c2/c0/53c2c093128a27e6b3348241e12a13ac.png' />
+         <div className="App" {...style}>
             <Layout
                header={
                   <Navbar justifyContent='space-around'>
@@ -24,7 +26,7 @@ class App extends Component {
                      </NavItem>
                      <NavItem>
                         <NavLink exact to='/' activeClassName='Selected'>
-                           <img src={logo} width={50} alt='tp' />
+                           <span className='brand'>TP</span>
                         </NavLink>
                      </NavItem>
                      <NavItem>

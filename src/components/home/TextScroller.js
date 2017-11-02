@@ -26,7 +26,8 @@ class TextScroller extends React.Component {
       return (
          <div className='TextScroller' style={{ height }}>
             <div style={{
-               marginTop: -1 * height * this.state.currentItem
+               marginTop: -1 * height * this.state.currentItem,
+               textAlign: 'center'
             }}>
                {
                   this.props.items.map((item, i) => (

@@ -1,4 +1,10 @@
 import React from 'react';
+import { css } from 'glamor';
+
+let contentRules = css({
+   marginTop: '50px',
+   padding: '0 10px'
+});
 
 const Layout = (props) => {
    return (
@@ -6,7 +12,7 @@ const Layout = (props) => {
          <div>
             {props.header}
          </div>
-         <div style={{ marginTop: 50 }}>
+         <div {...contentRules}>
             {props.content}
          </div>
          <div>

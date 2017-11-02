@@ -11,13 +11,8 @@
    margin: 5px 0;
    transition: color 0.3s;
    font-weight: 100;
-   color: inherit;
-}
-
-.NavItem > *:hover {
-   /* color: #fff; */
 }
 
 .NavItem > *.Selected {
-   border-bottom: 1px solid #333;
+   border-bottom: 1px solid #fff;
 }
