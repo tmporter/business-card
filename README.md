@@ -1,13 +1,11 @@
-# gatsby-starter-default
-The default Gatsby starter
+# business-card
+This is my digital business card which acts as a hub for all the different ways to get in contact with me.
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+This site also acts as a way for me to play around with new technologies.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Under the Hood
+This site is currently built with
+- [GatsbyJS](https://www.gatsbyjs.org/)
+- [React](https://reactjs.org/)
+- [styled-components](https://www.styled-components.com/)
+- [gh-pages](https://pages.github.com/)
