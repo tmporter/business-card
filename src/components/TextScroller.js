@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 class TextScroller extends React.Component {
     state = {
@@ -8,13 +8,13 @@ class TextScroller extends React.Component {
     }
 
     componentDidMount() {
-        const { scrollSpeed } = this.props;
+        const { speed, children } = this.props;
 
         const intervalId = setInterval(() => {
             const { currentItem } = this.state;
-            const itemCount = this.props.items.length;
+            const itemCount = children.length;
             this.setState({ currentItem: (currentItem + 1) % itemCount })
-        }, scrollSpeed || 2000);
+        }, speed || 2000);
 
         this.setState({ intervalId });
     }
@@ -25,13 +25,15 @@ class TextScroller extends React.Component {
 
     render() {
         const { currentItem } = this.state;
-        const { height, items } = this.props;
+        const { children } = this.props;
 
         return (
-            <TextScrollerStyle height={height}>
-                <TextScrollerInnerStyle marginTop={-1 * height * currentItem}>
-                    {items.map((item, i) => (
-                        <TextScrollerItem key={i}>{item}</TextScrollerItem>
+            <TextScrollerStyle>
+                <TextScrollerInnerStyle top={-50 * currentItem}>
+                    {children.map(child => (
+                        <TextScrollerItem>
+                            {child}
+                        </TextScrollerItem>
                     ))}
                 </TextScrollerInnerStyle>
             </TextScrollerStyle>
@@ -39,22 +41,36 @@ class TextScroller extends React.Component {
     }
 }
 
+TextScroller.defaultProps = {
+    height: 30
+}
+
 const TextScrollerInnerStyle = styled.div`
-    transition: margin-top 0.5s;
+    padding: 0;
+    transition: top 0.5s;
+    position: relative;
+    top: ${props => props.top}px;
+    left: 0;
     text-align: center;
-    margin-top: ${props => props.marginTop}px;
+`;
+
+const TextScrollerItem = styled.div`
+    height: 50px;
+    opacity: 0.7;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid orange; */
 `;
 
 const TextScrollerStyle = styled.div`
-    box-sizing: border-box;
     overflow: hidden;
-    text-align: left;
+    /* border: 1px solid red; */
     vertical-align: bottom;
-    height: ${props => props.height}px;
-`;
-
-const TextScrollerItem = styled.span`
-    display: block;
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    width: 200px;
 `;
 
 export default TextScroller;

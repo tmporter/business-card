@@ -3,13 +3,29 @@ import Link from 'gatsby-link'
 import styled from 'styled-components';
 import TextScroller from '../components/TextScroller';
 import Portrait from '../components/Portrait';
+import Title, { Subtitle } from '../components/Title';
 import SocialLinks, { SocialLink } from '../components/SocialLinks';
 import { Mail, Twitter, Github } from 'react-feather';
 
+
 const IndexPage = () => (
   <IndexPageStyle>
-    <h1>Timothy Porter</h1>
-    
+    <Title>Timothy Porter</Title>
+
+    <TextScroller speed={2000}>
+      <span>Developer</span>
+      <span>La Croix Fan</span>
+      <span>Planeswalker</span>
+      <span>Hylian</span>
+    </TextScroller>
+
+    <Portrait
+      src='https://pbs.twimg.com/profile_images/911278245693333506/sN0ajzgR_400x400.jpg'
+      alt='Timothy Porter'
+      size='70vw'
+      style={{ margin: '20px 0', maxWidth: '400px', maxHeight: '400px' }}
+    />
+
     <SocialLinks>
       <SocialLink href='mailto:tmporter42@gmail.com'>
         <Mail />
@@ -22,28 +38,13 @@ const IndexPage = () => (
       </SocialLink>
     </SocialLinks>
 
-    <Portrait
-      src='https://pbs.twimg.com/profile_images/911278245693333506/sN0ajzgR_400x400.jpg'
-      alt='Timothy Porter'
-      size='70vw'
-      style={{ margin: '20px 0', maxWidth: '400px', maxHeight: '400px' }}
-    />
-
-    <TextScroller
-      scrollSpeed={2000}
-      height={24}
-      items={[
-        'developer',
-        'la croix fanboy',
-        'planeswalker',
-        'hylian'
-      ]}
-    />
   </IndexPageStyle>
 )
 
 const IndexPageStyle = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default IndexPage

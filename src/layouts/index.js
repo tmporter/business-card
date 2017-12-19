@@ -4,12 +4,12 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
-import './index.css'
+import './index.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Timothy Porter | Web Boi"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
