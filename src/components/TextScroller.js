@@ -30,8 +30,8 @@ class TextScroller extends React.Component {
         return (
             <TextScrollerStyle>
                 <TextScrollerInnerStyle top={-50 * currentItem}>
-                    {children.map(child => (
-                        <TextScrollerItem>
+                    {children.map((child, i) => (
+                        <TextScrollerItem key={i}>
                             {child}
                         </TextScrollerItem>
                     ))}
