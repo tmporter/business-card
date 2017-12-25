@@ -22,6 +22,9 @@ const TemplateWrapper = ({ children }) => (
       }}
     >
       {children()}
+      <footer>
+        Made with &hearts; using ReactJS, GatsbyJS, and Feather Icons.
+      </footer>
     </div>
   </div>
 )

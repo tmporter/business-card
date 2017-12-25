@@ -26,11 +26,19 @@ const IndexPage = () => (
       style={{ margin: "20px 0", maxWidth: "400px", maxHeight: "400px" }}
     />
 
+    <p>I'm web developer making cool things for the internet.</p>
+
     <SocialLinks>
-      <SocialLink href="mailto:tmporter42@gmail.com" title="tmporter42@gmail.com">
+      <SocialLink
+        href="mailto:tmporter42@gmail.com"
+        title="tmporter42@gmail.com"
+      >
         <Mail />
       </SocialLink>
-      <SocialLink href="https://www.linkedin.com/in/timothy-porter/" title="LinkedIn">
+      <SocialLink
+        href="https://www.linkedin.com/in/timothy-porter/"
+        title="LinkedIn"
+      >
         <Linkedin />
       </SocialLink>
       <SocialLink href="https://github.com/tmporter" title="GitHub">
@@ -40,12 +48,6 @@ const IndexPage = () => (
         <Twitter />
       </SocialLink>
     </SocialLinks>
-
-    <p>
-      <em>"Insert inspirational quote here."</em>
-    </p>
-
-    <p>I'm web developer making cool things for the internet.</p>
   </IndexPageStyle>
 );
 
