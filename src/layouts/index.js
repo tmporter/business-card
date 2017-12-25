@@ -9,10 +9,10 @@ import './index.css';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Timothy Porter | Web Boi"
+      title="Timothy Porter | Web guy"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Timothy Porter | Building things for the internet' },
+        { name: 'keywords', content: 'web, developer, react, gatsby' },
       ]}
     />
     <div

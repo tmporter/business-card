@@ -70,7 +70,7 @@ const TextScrollerStyle = styled.div`
     vertical-align: bottom;
     height: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-    width: 200px;
+    width: 300px;
 `;
 
 export default TextScroller;
